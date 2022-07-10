@@ -7,7 +7,7 @@ from django.core.validators import MinLengthValidator, MinValueValidator
 
 
 class Category(models.Model):
-    slug = models.CharField(max_length=20, unique=True, validators=[MinLengthValidator(5)]) # 1-07
+    slug = models.CharField(max_length=20, unique=True, validators=[MinLengthValidator(5)], null=True) # 1-07
     name = models.CharField(max_length=20, db_index=True)
     class Meta:
         verbose_name = "Категория"
